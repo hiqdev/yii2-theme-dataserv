@@ -44,7 +44,7 @@
         }
     ],
     "require": {
-        "yiisoft/yii2-bootstrap": "~2.0.0",
+        "yiisoft/yii2-pnotify": "<2.0 || dev-master",
         "hiqdev/yii2-thememanager": "<2.0 || dev-master"
     },
     "require-dev": {
