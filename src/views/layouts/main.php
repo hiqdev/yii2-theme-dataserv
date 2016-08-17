@@ -4,7 +4,7 @@
 /* @var $content string */
 
 use app\widgets\PanelTopCart;
-use hipanel\widgets\Alert;
+use hiqdev\pnotify\Alert;
 use hisite\modules\news\widgets\NewsRotatorWidget;
 use yii\helpers\Html;
 use yii\widgets\Menu;
