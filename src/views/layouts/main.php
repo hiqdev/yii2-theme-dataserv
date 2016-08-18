@@ -3,8 +3,10 @@
 /* @var $this \yii\web\View */
 /* @var $content string */
 
-use app\widgets\PanelTopCart;
 use hiqdev\pnotify\Alert;
+use hiqdev\yii2\cart\widgets\PanelTopCart;
+use hiqdev\yii2\language\widgets\LanguageMenu;
+use hiqdev\thememanager\Module as ThemeModule;
 use hisite\modules\news\widgets\NewsRotatorWidget;
 use yii\helpers\Html;
 use yii\widgets\Menu;
@@ -52,7 +54,7 @@ $menuItems = [
 </head>
 <body>
 <?php $this->beginBody() ?>
-<?= Alert::widget(); ?>
+<?= Alert::widget() ?>
 <!-- TOP NAV -->
 <div class="topmenu">
     <div class="row">
@@ -70,7 +72,7 @@ $menuItems = [
                     <li><?= Html::a(Yii::t('hisite', 'PANEL'), '#'); ?></li>
                 <?php endif; ?>
                 <!--li><i class="fa fa-commenting-o"></i> <a href="#"><?= Yii::t('hisite', 'ONLINE CHAT') ?></a></li-->
-                <?= \app\widgets\LanguageDropdown::widget() ?>
+                <?= LanguageMenu::widget() ?>
             </ul>
         </div>
     </div>
@@ -99,7 +101,7 @@ $menuItems = [
 </div>
 <!-- END OF HEADER -->
 
-<?php if (\app\helpers\ThemeHelper::isHomePage() === false) : ?>
+<?php if (ThemeModule::isHomePage() === false) : ?>
     <?php if ($this->blocks['subHeaderClass'] != 'domainavailability') : ?>
         <div id="subheader" class="<?= $this->blocks['subHeaderClass'] ? : 'blog' ?>">
             <div class="subheader-text">
@@ -124,20 +126,14 @@ $menuItems = [
                 </div>
             </div>
         </div>
-    <?php endif; ?>
-    <?= $content ?>
-<?php else : ?>
-    <?= \app\widgets\DomainAvailabilityWidget::widget() ?>
-    <?= \app\widgets\NewPlansWidget::widget() ?>
-    <?= \app\widgets\PricingboxWidget::widget() ?>
-    <?= \app\widgets\OurAppWidget::widget() ?>
-    <?= NewsRotatorWidget::widget() ?>
-<?php endif; ?>
+    <?php endif ?>
+<?php endif ?>
+
+<?= $content ?>
 
 <!-- FOOTER -->
 <div class="footer">
     <div class="row">
-
         <div class="col-sm-3">
             <h4><?= Yii::t('hisite', 'Domains') ?></h4>
             <?= Menu::widget([
