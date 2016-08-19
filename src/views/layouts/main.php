@@ -6,7 +6,6 @@
 use hiqdev\pnotify\Alert;
 use hiqdev\yii2\cart\widgets\PanelTopCart;
 use hiqdev\yii2\language\widgets\LanguageMenu;
-use hiqdev\thememanager\Module as ThemeModule;
 use hisite\modules\news\widgets\NewsRotatorWidget;
 use yii\helpers\Html;
 use yii\widgets\Menu;
@@ -101,7 +100,7 @@ $menuItems = [
 </div>
 <!-- END OF HEADER -->
 
-<?php if (ThemeModule::isHomePage() === false) : ?>
+<?php if (!Yii::$app->get('themeManager')->isHomePage()) : ?>
     <?php if ($this->blocks['subHeaderClass'] != 'domainavailability') : ?>
         <div id="subheader" class="<?= $this->blocks['subHeaderClass'] ? : 'blog' ?>">
             <div class="subheader-text">
