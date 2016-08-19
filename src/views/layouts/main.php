@@ -8,6 +8,7 @@ use hiqdev\yii2\cart\widgets\PanelTopCart;
 use hiqdev\yii2\language\widgets\LanguageMenu;
 use hisite\modules\news\widgets\NewsRotatorWidget;
 use yii\helpers\Html;
+use yii\helpers\Url;
 use yii\widgets\Menu;
 
 $menuItems = [
@@ -88,10 +89,10 @@ Yii::$app->get('themeManager')->registerAssets();
         <div class="col-sm-9">
 
             <nav id="desktop-menu">
-                <?= Menu::widget([
+                <?= Yii::$app->menuManager->main->render([
+                    'class' => Menu::class,
                     'options' => ['class' => 'sf-menu', 'id' => 'navigation'],
                     'activeCssClass' => 'current',
-                    'items' => $menuItems,
                 ]) ?>
             </nav>
         </div>
@@ -132,39 +133,20 @@ Yii::$app->get('themeManager')->registerAssets();
 <!-- FOOTER -->
 <div class="footer">
     <div class="row">
-        <div class="col-sm-3">
-            <h4><?= Yii::t('hisite', 'Domains') ?></h4>
-            <?= Menu::widget([
-                'items' => $menuItems[0]['items'],
-            ]) ?>
-        </div>
-
-        <div class="col-sm-3">
-            <h4><?= Yii::t('hisite', 'Hosting') ?></h4>
-            <?= Menu::widget([
-                'items' => $menuItems[1]['items'],
-            ]) ?>
-        </div>
-
-        <div class="col-sm-3">
-            <h4><?= Yii::t('hisite', 'For resellers') ?></h4>
-            <?= Menu::widget([
-                'items' => $menuItems[2]['items'],
-            ]) ?>
-        </div>
-
-        <div class="col-sm-3">
-            <h4><?= Yii::t('hisite', 'Other') ?></h4>
-            <?= Menu::widget([
-                'items' => [
-                    ['label' => Yii::t('hisite', 'About us'), 'url' => ['/site/page', 'view' => 'about']],
-                    ['label' => Yii::t('hisite', 'Contacts'), 'url' => ['/site/contact']],
-                    ['label' => Yii::t('hisite', 'Promotions'), 'url' => ['/site/page', 'view' => 'promotions']],
-                    ['label' => Yii::t('hisite', 'Loyalty program'), 'url' => ['/site/page', 'view' => 'loyalty-program']],
-                    ['label' => Yii::t('hisite', 'Rules'), 'url' => ['/site/page', 'view' => 'rules']],
-                ],
-            ]) ?>
-        </div>
+        <?php foreach (Yii::$app->menuManager->footer->getItems() as $item) : ?>
+            <div class="col-sm-3">
+                <?php if ($item['url']==='#') : ?>
+                    <h4><?= $item['label'] ?></h4>
+                <?php else : ?>
+                    <h4><a href="<?= Url::to($item['url']) ?>"><?= $item['label'] ?></a></h4>
+                <?php endif ?>
+                <?php if (isset($item['items'])) : ?>
+                    <?= Menu::widget([
+                        'items' => $menuItems[0]['items'],
+                    ]) ?>
+                <?php endif ?>
+            </div>
+        <?php endforeach ?>
     </div>
 </div>
 <!-- END FOOTER -->
@@ -174,12 +156,15 @@ Yii::$app->get('themeManager')->registerAssets();
     <div class="row">
         <div class="col-sm-12">
             <ul class="social-links">
-                <li><a href="#" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#" title="Vkontakte"><i class="fa fa-vk"></i></a></li>
-                <li><a href="#" title="Github"><i class="fa fa-github-alt"></i></a></li>
+            <?php foreach (['twitter', 'facebook', 'vk', 'youtube', 'instagram', 'pinterest', 'github'] as $name) : ?>
+                <?php $icon = $name === 'github' ? 'github-alt' : $name ?>
+                <?php $link = $name . '_link' ?>
+                <?php if (isset(Yii::$app->params[$link]) && Yii::$app->params[$link]) : ?>
+                    <li><a href="<?= Yii::$app->params[$link] ?>" title="<?= ucfirst($name) ?>"><i class="fa fa-<?= $icon ?>"></i></a></li>
+                <?php endif ?>
+            <?php endforeach ?>
             </ul>
-            <p class="text-center">Copyright© DataServ. All rights reserved.</p>
+            <p class="text-center">© <?= date('Y') ?> <?= Yii::$app->params['orgName'] ?>. All rights reserved.</p>
         </div>
     </div>
 </div>
