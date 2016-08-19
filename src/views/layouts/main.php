@@ -35,6 +35,9 @@ $menuItems = [
         ['label' => Yii::t('hisite', 'FAQ'), 'url' => ['/help/faq']],
     ]],
 ];
+
+Yii::$app->get('themeManager')->registerAssets();
+
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -44,10 +47,6 @@ $menuItems = [
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?= Html::csrfMetaTags() ?>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
-
-    <?= Html::cssFile(YII_DEBUG ? '@web/css/all.css' : '@web/css/all.min.css?v=' . filemtime(Yii::getAlias('@webroot/css/all.min.css'))) ?>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
 </head>
@@ -83,7 +82,7 @@ $menuItems = [
     <div class="row">
         <div class="col-sm-3">
             <div class="logo">
-                <a href="/"><?= Html::img('/images/logo.png') ?></a>
+                <a href="/"><?= Html::img(Yii::$app->assetManager->publish('@hiqdev/themes/dataserv/assets/images/logo.png')[1]) ?></a>
             </div>
         </div>
         <div class="col-sm-9">
@@ -206,11 +205,6 @@ $menuItems = [
 </div>
 <!-- END OF LOGIN MODAL -->
 <a href="#top" id="back-to-top" class="ripple"><i class="fa fa-angle-up"></i></a>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-
-<?= Html::jsFile(YII_DEBUG ? '@web/js/all.js' : '@web/js/all.min.js?v=' . filemtime(Yii::getAlias('@webroot/js/all.min.js'))) ?>
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <?php $this->endBody() ?>
 </body>
 </html>
