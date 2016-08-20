@@ -11,32 +11,6 @@ use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\widgets\Menu;
 
-$menuItems = [
-    ['label' => Yii::t('hisite', 'Domains'), 'url' => '#', 'items' => [
-        ['label' => Yii::t('hisite', 'Prices'), 'url' => ['/domain/prices']],
-        ['label' => Yii::t('hisite', 'Advantages'), 'url' => ['/domain/advantages']],
-        ['label' => Yii::t('hisite', 'Transfer'), 'url' => ['/domainchecker/transfer/index']],
-        ['label' => Yii::t('hisite', 'Premium Package'), 'url' => ['/domain/premium-package']],
-//        ['label' => Yii::t('hisite', 'Whois lookup'), 'url' => ['/domain/whois-lookup']],
-    ]],
-    ['label' => Yii::t('hisite', 'Hosting'), 'url' => '#', 'items' => [
-        ['label' => Yii::t('hisite', 'XEN SSD'), 'url' => ['/hosting/xen-ssd']],
-        ['label' => Yii::t('hisite', 'OpenVZ'), 'url' => ['/hosting/open-vz']],
-        ['label' => Yii::t('hisite', 'Tariffs details'), 'url' => ['/hosting/tariffs-details']],
-        ['label' => Yii::t('hisite', 'Advantages'), 'url' => ['/hosting/advantages']],
-        ['label' => Yii::t('hisite', 'What is VDS'), 'url' => ['/hosting/what-is-vds']],
-    ]],
-    ['label' => Yii::t('hisite', 'For resellers'), 'url' => '#', 'items' => [
-        ['label' => Yii::t('hisite', 'Prices'), 'url' => ['/reseller/prices']],
-        ['label' => Yii::t('hisite', 'Advantages'), 'url' => ['/reseller/advantages']],
-        ['label' => Yii::t('hisite', 'API'), 'url' => ['/reseller/api']],
-    ]],
-    ['label' => Yii::t('hisite', 'News'), 'url' => '/news/article/index'],
-    ['label' => Yii::t('hisite', 'Help'), 'url' => '#', 'items' => [
-        ['label' => Yii::t('hisite', 'FAQ'), 'url' => ['/help/faq']],
-    ]],
-];
-
 Yii::$app->get('themeManager')->registerAssets();
 
 ?>
@@ -133,8 +107,9 @@ Yii::$app->get('themeManager')->registerAssets();
 <!-- FOOTER -->
 <div class="footer">
     <div class="row">
+        <div class="col-sm-1"></div>
         <?php foreach (Yii::$app->menuManager->footer->getItems() as $item) : ?>
-            <div class="col-sm-3">
+            <div class="col-sm-2">
                 <?php if ($item['url']==='#') : ?>
                     <h4><?= $item['label'] ?></h4>
                 <?php else : ?>
@@ -142,7 +117,7 @@ Yii::$app->get('themeManager')->registerAssets();
                 <?php endif ?>
                 <?php if (isset($item['items'])) : ?>
                     <?= Menu::widget([
-                        'items' => $menuItems[0]['items'],
+                        'items' => $item['items'],
                     ]) ?>
                 <?php endif ?>
             </div>
