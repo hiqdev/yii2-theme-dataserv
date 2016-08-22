@@ -33,7 +33,7 @@ Yii::$app->get('themeManager')->registerAssets();
     <div class="row">
         <div class="col-sm-3">
             <ul class="top left">
-                <li><i class="fa fa-envelope-o"></i> 24/7 <?= Yii::t('hisite', 'tech support') ?> <?= Html::mailto('support@ahnames.com', 'support@ahnames.com') ?></li>
+                <li><i class="fa fa-envelope-o"></i> 24/7 <?= Yii::t('hisite', 'tech support') ?> <?= Html::mailto(Yii::$app->params['supportEmail'], Yii::$app->params['supportEmail']) ?></li>
             </ul>
         </div>
         <div class="col-sm-9">
@@ -57,7 +57,7 @@ Yii::$app->get('themeManager')->registerAssets();
     <div class="row">
         <div class="col-sm-3">
             <div class="logo">
-                <a href="/"><?= Html::img(Yii::$app->assetManager->publish('@hiqdev/themes/dataserv/assets/images/logo.png')[1]) ?></a>
+                <a href="/" style="color:white;font-size:28px"><i class="fa fa-server"></i> <?= Yii::$app->name ?></a>
             </div>
         </div>
         <div class="col-sm-9">
