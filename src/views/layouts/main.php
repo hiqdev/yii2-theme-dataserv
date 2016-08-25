@@ -131,13 +131,7 @@ Yii::$app->get('themeManager')->registerAssets();
     <div class="row">
         <div class="col-sm-12">
             <ul class="social-links">
-            <?php foreach (['twitter', 'facebook', 'vk', 'youtube', 'instagram', 'pinterest', 'github'] as $name) : ?>
-                <?php $icon = $name === 'github' ? 'github-alt' : $name ?>
-                <?php $link = $name . '_link' ?>
-                <?php if (isset(Yii::$app->params[$link]) && Yii::$app->params[$link]) : ?>
-                    <li><a href="<?= Yii::$app->params[$link] ?>" title="<?= ucfirst($name) ?>"><i class="fa fa-<?= $icon ?>"></i></a></li>
-                <?php endif ?>
-            <?php endforeach ?>
+                <?= Yii::$app->themeManager->widget('SocialLinks') ?>
             </ul>
             <p class="text-center">© <?= Yii::$app->themeManager->widget('CopyrightYears') ?> <?= Yii::$app->themeManager->widget('OrganizationLink') ?>. All rights reserved.</p>
         </div>
