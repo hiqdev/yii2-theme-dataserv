@@ -139,7 +139,7 @@ Yii::$app->get('themeManager')->registerAssets();
                 <?php endif ?>
             <?php endforeach ?>
             </ul>
-            <p class="text-center">© <?= date('Y') ?> <?= Yii::$app->params['orgName'] ?>. All rights reserved.</p>
+            <p class="text-center">© <?= Yii::$app->themeManager->widget('CopyrightYears') ?> <?= Yii::$app->themeManager->widget('OrganizationLink') ?>. All rights reserved.</p>
         </div>
     </div>
 </div>
