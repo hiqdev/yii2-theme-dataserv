@@ -3,10 +3,8 @@
 /* @var $this \yii\web\View */
 /* @var $content string */
 
-use hiqdev\pnotify\Alert;
 use hiqdev\yii2\cart\widgets\PanelTopCart;
 use hiqdev\yii2\language\widgets\LanguageMenu;
-use hisite\modules\news\widgets\NewsRotatorWidget;
 use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\widgets\Menu;
@@ -27,7 +25,9 @@ Yii::$app->get('themeManager')->registerAssets();
 </head>
 <body>
 <?php $this->beginBody() ?>
-<?= Alert::widget() ?>
+<?php if (Yii::$app->themeManager->hasWidget('Flashes')) : ?>
+    <?= Yii::$app->themeManager->widget('Flashes') ?>
+<?php endif ?>
 <!-- TOP NAV -->
 <div class="topmenu">
     <div class="row">
@@ -64,7 +64,6 @@ Yii::$app->get('themeManager')->registerAssets();
 
             <nav id="desktop-menu">
                 <?= Yii::$app->menuManager->main->render([
-                    'class' => Menu::class,
                     'options' => ['class' => 'sf-menu', 'id' => 'navigation'],
                     'activeCssClass' => 'current',
                 ]) ?>
@@ -116,7 +115,8 @@ Yii::$app->get('themeManager')->registerAssets();
                     <h4><a href="<?= Url::to($item['url']) ?>"><?= $item['label'] ?></a></h4>
                 <?php endif ?>
                 <?php if (isset($item['items'])) : ?>
-                    <?= Menu::widget([
+                    <?= Yii::$app->themeManager->widget([
+                        'class' => 'Menu',
                         'items' => $item['items'],
                     ]) ?>
                 <?php endif ?>
