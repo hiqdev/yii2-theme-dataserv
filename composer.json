@@ -44,7 +44,6 @@
         }
     ],
     "require": {
-        "hiqdev/yii2-pnotify": "<2.0 || dev-master",
         "hiqdev/yii2-thememanager": "<2.0 || dev-master"
     },
     "require-dev": {
