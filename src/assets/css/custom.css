@@ -1,0 +1,28 @@
+.logincontainer {
+    margin: 40px auto 100px auto;
+    padding: 0 10px;
+    max-width: 500px;
+}
+
+.header-lined, ol.breadcrumb {
+    text-align: center;
+}
+
+div.header-lined h1 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    padding: 6px 0;
+    /*border-bottom: 1px solid #ccc;*/
+    font-weight: 400;
+}
+
+.header-lined h1 small {
+    display: block;
+    width: 100%;
+    font-weight: 400;
+    padding: 10px 0 0;
+}
+
+div.header-lined small {
+    white-space: nowrap;
+}
