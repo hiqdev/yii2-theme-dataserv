@@ -40,6 +40,7 @@ $bigfootMenuItmes = Yii::$app->menuManager->bigfoot->getItems();
             <p class="text-center">
                 © <?= Yii::$app->themeManager->widget('CopyrightYears') ?> <?= Yii::$app->themeManager->widget('OrganizationLink') ?>.
                 All rights reserved. <?= Yii::$app->menuManager->footer->render() ?>
+                <?= Yii::$app->themeManager->widget('PoweredBy') ?>
             </p>
         </div>
     </div>
