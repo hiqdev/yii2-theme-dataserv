@@ -2,15 +2,15 @@
 
 use yii\helpers\Url;
 
-$footerMenuItmes = Yii::$app->menuManager->footer->getItems();
+$bigfootMenuItmes = Yii::$app->menuManager->bigfoot->getItems();
 ?>
 
-<?php if (!empty($footerMenuItmes)) : ?>
+<?php if (!empty($bigfootMenuItmes)) : ?>
     <!-- FOOTER -->
     <div class="footer">
         <div class="row">
             <div class="col-sm-1"></div>
-            <?php foreach ($footerMenuItmes as $item) : ?>
+            <?php foreach ($bigfootMenuItmes as $item) : ?>
                 <div class="col-sm-2">
                     <?php if ($item['url'] === '#') : ?>
                         <h4><?= $item['label'] ?></h4>
@@ -38,8 +38,8 @@ $footerMenuItmes = Yii::$app->menuManager->footer->getItems();
                 <?= Yii::$app->themeManager->widget('SocialLinks') ?>
             </ul>
             <p class="text-center">
-                © <?= Yii::$app->themeManager->widget('CopyrightYears') ?> <?= Yii::$app->themeManager->widget('OrganizationLink') ?>
-                . All rights reserved. <?= $this->render('//layouts/_poweredBy') ?>
+                © <?= Yii::$app->themeManager->widget('CopyrightYears') ?> <?= Yii::$app->themeManager->widget('OrganizationLink') ?>.
+                All rights reserved. <?= Yii::$app->menuManager->footer->render() ?>
             </p>
         </div>
     </div>
