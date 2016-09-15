@@ -36,7 +36,7 @@ Yii::$app->get('themeManager')->registerAssets();
 <!-- LOGIN MODAL -->
 <div class="modal fade" id="LoginModal" tabindex="-1" role="dialog" aria-labelledby="LoginModal">
     <div class="modal-dialog" role="document">
-        <form method="post" action="http://whmcs.audemedia.com/dologin.php?systpl=dataservwhmcs" class="material">
+        <form method="post" action="" class="material">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
