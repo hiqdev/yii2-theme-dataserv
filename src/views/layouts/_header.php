@@ -17,19 +17,11 @@ use yii\helpers\Html;
             </ul>
         </div>
         <div class="col-sm-9">
-            <ul class="topright">
-                <?= PanelTopCart::widget() ?>
-                <?php if (Yii::$app->user->isGuest) : ?>
-                    <li>
-                        <i class="fa fa-unlock-alt"></i>
-                        <a href="#" data-toggle="modal"
-                           data-target="#LoginModal"><?= Yii::t('dataserv', 'CLIENT AREA') ?></a>
-                    </li>
-                <?php else : ?>
-                    <li><?= Html::a(Yii::t('hisite', 'PANEL'), '#'); ?></li>
-                <?php endif; ?>
-                <?= LanguageMenu::widget() ?>
-            </ul>
+            <?= Yii::$app->menuManager->navbar->render([
+                'options' => [
+                    'class' => 'topright'
+                ]
+            ]) ?>
         </div>
     </div>
 </div>
