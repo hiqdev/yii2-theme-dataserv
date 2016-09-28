@@ -23,7 +23,6 @@ class Asset extends \yii\web\AssetBundle
      */
     public $css = [
         '//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css',
-        '//ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css',
 
         'css/bootstrap-theme.min.css',
         'css/block_grid_bootstrap.css',
@@ -38,7 +37,6 @@ class Asset extends \yii\web\AssetBundle
     ];
 
     public $js = [
-        '//ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js',
         'js/morphext.min.js',
         'js/hoverIntent.js',
         'js/superfish.min.js',
