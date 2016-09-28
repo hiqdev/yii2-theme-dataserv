@@ -44,7 +44,8 @@
         }
     ],
     "require": {
-        "hiqdev/yii2-thememanager": "<2.0 || dev-master"
+        "hiqdev/yii2-thememanager": "<2.0 || dev-master",
+        "hiqdev/yii2-asset-icheck": "~1.0.2.5"
     },
     "require-dev": {
         "hiqdev/hidev-php": "<2.0",
