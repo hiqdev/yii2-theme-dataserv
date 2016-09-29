@@ -38,9 +38,8 @@ $bigfootMenuItmes = Yii::$app->menuManager->bigfoot->getItems();
                 <?= Yii::$app->themeManager->widget('SocialLinks') ?>
             </ul>
             <p class="text-center">
-                © <?= Yii::$app->themeManager->widget('CopyrightYears') ?> <?= Yii::$app->themeManager->widget('OrganizationLink') ?>
-                .
-                <?= Yii::t('hiqdev/themes/original', 'All rights reserved.') ?>
+                © <?= Yii::$app->themeManager->widget('CopyrightYears') ?> <?= Yii::$app->themeManager->widget('OrganizationLink') ?>.
+                <?= Yii::t('hiqdev/themes/dataserv', 'All rights reserved') ?>.
 
                 <?= Yii::$app->themeManager->widget('PoweredBy') ?>
             </p>
