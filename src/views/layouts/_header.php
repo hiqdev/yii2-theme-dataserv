@@ -46,32 +46,19 @@ use yii\helpers\Html;
 </div>
 <!-- END OF HEADER -->
 
-<?php if (!Yii::$app->get('themeManager')->isHomePage()) : ?>
-    <?php if ($this->blocks['subHeaderClass'] != 'domainavailability') : ?>
-        <div id="subheader" class="<?= $this->blocks['subHeaderClass'] ?: 'blog' ?>">
-            <div class="subheader-text">
-                <?= Html::tag('h1', $this->title) ?>
-                <?= Html::tag('h2', $this->blocks['subTitle']) ?>
-            </div>
+<?php if (empty($this->blocks['subHeader'])) : ?>
+    <div id="subheader" class="<?= $this->blocks['subHeaderClass'] ?: 'blog' ?>">
+        <div class="subheader-text">
+            <?= Html::tag('h1', $this->title) ?>
+            <?= Html::tag('h2', $this->blocks['subTitle']) ?>
+        </div>
 
-            <?php if ($this->context->id == 'news' && $this->context->action->id == 'view') : ?>
-                <a href="#" rel="shared-popover" data-popover-content="#shared-btn-Popover" title="Share"
-                   data-placement="bottom" class="mtr-btn button-circle button-fab ripple"><i
-                        class="fa fa-share-alt"></i></a>
-            <?php endif; ?>
-        </div>
-    <?php else: ?>
-        <div class="domainavailability">
-            <div class="row">
-                <div class="col-sm-12 col-md-9 center-block">
-                    <?= Html::tag('h1', $this->title, ['class' => 'text-center']) ?>
-                    <div class="domain-form-container">
-                        <?= DomainSearchForm::widget([
-                            'dropDownZonesOptions' => !empty($this->blocks['dropDownZonesOptions']) ? $this->blocks['dropDownZonesOptions'] : null
-                        ]) ?>
-                    </div>
-                </div>
-            </div>
-        </div>
-    <?php endif ?>
+        <?php if ($this->context->id == 'news' && $this->context->action->id == 'view') : ?>
+            <a href="#" rel="shared-popover" data-popover-content="#shared-btn-Popover" title="Share"
+               data-placement="bottom" class="mtr-btn button-circle button-fab ripple"><i
+                    class="fa fa-share-alt"></i></a>
+        <?php endif; ?>
+    </div>
+<?php else: ?>
+    <?= $this->blocks['subHeader'] ?>
 <?php endif ?>
