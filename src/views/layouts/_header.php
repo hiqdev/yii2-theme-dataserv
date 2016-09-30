@@ -1,6 +1,5 @@
 <?php
 
-use hipanel\site\widgets\DomainSearchForm;
 use yii\helpers\Html;
 
 ?>
