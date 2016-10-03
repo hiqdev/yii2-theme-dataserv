@@ -26,3 +26,10 @@ div.header-lined h1 {
 div.header-lined small {
     white-space: nowrap;
 }
+
+.has-success .form-control,
+.has-error .form-control,
+.has-feedback .form-control,
+.form-control {
+    box-shadow: none!important;
+}
