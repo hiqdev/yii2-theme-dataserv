@@ -35,7 +35,7 @@ $this->registerCss("
     border-bottom-color: rgba(20, 20, 20, 0.97);
 }
 .language-popover .popover-content ul {
-    margin: 6px 0 14px 0;
+    margin: 0;
     padding: 0;
     list-style-type: none;
     overflow: hidden;

@@ -176,7 +176,7 @@ p {
 ul li, ol li {
     font-family: inherit;
     font-size: 17px;
-    line-height: 1.5;
+    /*line-height: 1.5;*/
     font-weight: 300;
 }
 
@@ -340,9 +340,9 @@ ul.topright {
 ul.topright li {
     float: left;
     display: inline;
-    margin-right: 27px;
+    margin-right: 15px;
     padding-top: 4px;
-    font-size: 11px;
+    font-size: 10px;
 }
 
 ul.topright li i {
@@ -6927,12 +6927,11 @@ ul.topright li.activeLanguage a {
 #top-cart .nav, #top-cart > a > span {
     margin: 0;
     padding: 0;
-    line-height: 22px;
-    font-size: 11px;
+    font-size: 10px;
 }
 
 #top-cart a.quick-nav {
-    margin: 0 0 0 15px;
+    margin: 0;
     padding: 0;
     color: #fff!important;
 }
