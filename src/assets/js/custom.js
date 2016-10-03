@@ -10,8 +10,6 @@
     });
 
     $(document).ready(function () {
-
-        $('[data-toggle="popover"]').popover();
         $('[rel="shared-popover"]').popover({
             trigger: 'click',
             container: 'body',
