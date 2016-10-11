@@ -5911,7 +5911,7 @@ button.button-circle i {
         margin-right: 17px;
     }
 
-    .logo img {
+    .logo img, .logo a {
         text-align: center;
         display: table;
         margin: 0 auto;
@@ -6955,4 +6955,5 @@ ul.topright li.activeLanguage a {
 .apps-grid .block-grid-item .odometer {
     font-size: 64px;
 }
+
 
