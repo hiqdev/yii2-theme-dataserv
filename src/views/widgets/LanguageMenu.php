@@ -59,9 +59,9 @@ $this->registerCss("
         <ul class="unstyled">
             <?php foreach ($languages as $code => $language) : ?>
                 <li>
-                    <?= Html::a($language, Url::to([$selectUrl, 'language' => $code])) ?>
+                    <?= Html::a($language, Url::to(array_merge($selectUrl, ['language' => $code]))) ?>
                 </li>
-            <?php endforeach; ?>
+            <?php endforeach ?>
         </ul>
     </div>
 </div>
