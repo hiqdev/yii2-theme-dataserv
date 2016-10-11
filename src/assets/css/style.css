@@ -6636,9 +6636,11 @@ ul.topright li.activeLanguage a {
     margin: 0;
     border-bottom: 1px solid rgba(0, 0, 0, .1);
 }
+
 .testimonial-content p {
     text-align: justify;
 }
+
 .testimonial-content span {
     color: #999;
     font-size: 12px;
@@ -6682,18 +6684,21 @@ ul.topright li.activeLanguage a {
     width: 20%;
     float: left;
 }
+
 @media (min-width: 768px) {
     .col-sm-15 {
         width: 20%;
         float: left;
     }
 }
+
 @media (min-width: 992px) {
     .col-md-15 {
         width: 20%;
         float: left;
     }
 }
+
 @media (min-width: 1200px) {
     .col-lg-15 {
         width: 20%;
@@ -6705,6 +6710,7 @@ ul.topright li.activeLanguage a {
     color: #FFFFFF;
     text-decoration: underline;
 }
+
 .pricing-features a:hover {
     color: #FFFFFF;
     text-decoration: none;
@@ -6714,7 +6720,7 @@ ul.topright li.activeLanguage a {
     display: -webkit-box;
     display: -webkit-flex;
     display: flex;
-    flex:1 0 auto;
+    flex: 1 0 auto;
 }
 
 .domain-features .circle {
@@ -6735,6 +6741,7 @@ ul.topright li.activeLanguage a {
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
 }
+
 .about-icons i {
     font-size: 65px;
     color: #FFF;
@@ -6775,19 +6782,19 @@ ul.topright li.activeLanguage a {
 }
 
 #check-domain .has-error .form-control:focus,
-#check-domain .has-success .form-control:focus
-{
+#check-domain .has-success .form-control:focus {
     border-color: transparent;
-     -webkit-box-shadow: none;
-     box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
 }
+
 .help-block {
     font-size: smaller;
 }
 
 .nav-stacked > li.active > a, .nav-stacked > li.active > a:hover {
-    background: transparent!important;
-    color: #444!important;
+    background: transparent !important;
+    color: #444 !important;
 }
 
 /* Fix Select2 border radius */
@@ -6881,6 +6888,7 @@ ul.topright li.activeLanguage a {
 .domain-line .domain-zone.muted {
     color: #ccc;
 }
+
 .filter-nav li a {
     display: block;
 }
@@ -6910,12 +6918,11 @@ ul.topright li.activeLanguage a {
 #top-cart a.quick-nav {
     margin: 0;
     padding: 0;
-    color: #fff!important;
+    color: #fff !important;
 }
 
-table.tablesaw tr td:first-child {
+.shared-table td:first-child {
     white-space: nowrap;
-    width: 20%;
 }
 
 .blog nav ul.pagination li.active a {
@@ -6940,7 +6947,7 @@ table.tablesaw tr td:first-child {
     font-size: 16px;
 }
 
-.blog nav ul.pagination li span,  .blog nav ul.pagination li span:hover {
+.blog nav ul.pagination li span, .blog nav ul.pagination li span:hover {
     color: #cccccc;
     padding: 10px 18px 8px;
 }
@@ -6948,3 +6955,4 @@ table.tablesaw tr td:first-child {
 .apps-grid .block-grid-item .odometer {
     font-size: 64px;
 }
+
