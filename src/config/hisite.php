@@ -18,12 +18,12 @@ return [
         ],
         'i18n' => [
             'translations' => [
-                'hiqdev/themes/dataserv' => [
+                'hiqdev:themes:dataserv' => [
                     'class' => \yii\i18n\PhpMessageSource::class,
                     'basePath' => '@hiqdev/themes/dataserv/messages',
-                    'fileMap' => [
-                        'hiqdev/themes/dataserv' => 'dataserv.php',
-                    ],
+//                    'fileMap' => [
+//                        'hiqdev:themes:dataserv' => 'hiqdev:themes:dataserv.php',
+//                    ],
                 ],
             ],
         ],
