@@ -11,6 +11,6 @@ if ($positionsCount > 0) {
 <div id="top-cart" class="pull-right nav">
     <a href="<?= $widget->module->createUrl() ?>" class="quick-nav">
         <i class="fa fa-shopping-cart"></i>
-        <span class="hidden-xs"><?= Yii::t('hisite', 'Cart') ?></span>&nbsp;&nbsp;<span class="cart-count"><?= $positionsCount ?></span>
+        <span class="hidden-xs"><?= Yii::t('hiqdev:themes:dataserv', 'Cart') ?></span>&nbsp;&nbsp;<span class="cart-count"><?= $positionsCount ?></span>
     </a>
 </div>

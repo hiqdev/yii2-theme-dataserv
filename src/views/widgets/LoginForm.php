@@ -2,8 +2,8 @@
 use yii\bootstrap\ActiveForm;
 use yii\helpers\Html;
 
-$this->title = Yii::t('hisite', 'Login');
-$this->blocks['subTitle'] = Yii::t('hisite', 'This page is restricted');
+$this->title = Yii::t('hipanel:site', 'Login');
+$this->blocks['subTitle'] = Yii::t('hipanel:site', 'This page is restricted');
 ?>
 <section id="main-body" class="container">
 
