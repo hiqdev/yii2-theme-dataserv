@@ -4,6 +4,7 @@
 /** @var object $widget */
 
 $positionsCount = count($cart->positions);
+$this->registerCss("#top-cart span.cart-count { background-color: #999; padding: 0 5px;}");
 if ($positionsCount > 0) {
     $this->registerCss("#top-cart span.cart-count { background-color: #FF4081!important; padding: 0 5px;}");
 }
