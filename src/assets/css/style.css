@@ -342,7 +342,7 @@ ul.topright li {
     display: inline;
     margin-right: 15px;
     padding-top: 4px;
-    font-size: 10px;
+    font-size: 11px;
 }
 
 ul.topright li i {
@@ -6611,10 +6611,6 @@ ul.topright li.activeLanguage a {
     border-bottom: 1px solid #fff;
 }
 
-.topright {
-    text-transform: uppercase;
-}
-
 .domainavailability.front-page {
     background-color: #000000;
     background-repeat: no-repeat;
@@ -6912,7 +6908,6 @@ ul.topright li.activeLanguage a {
 #top-cart .nav, #top-cart > a > span {
     margin: 0;
     padding: 0;
-    font-size: 10px;
 }
 
 #top-cart a.quick-nav {
