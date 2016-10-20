@@ -1,5 +1,6 @@
 <?php
 
+use hiqdev\thememanager\widgets\LogoLink;
 use yii\helpers\Html;
 
 ?>
@@ -29,7 +30,7 @@ use yii\helpers\Html;
     <div class="row">
         <div class="col-sm-3">
             <div class="logo">
-                <a href="/" style="color:white;font-size:28px"><i class="fa fa-server"></i> <?= Yii::$app->name ?></a>
+                <?= Yii::$app->themeManager->widget('LogoLink') ?>
             </div>
         </div>
         <div class="col-sm-9">
