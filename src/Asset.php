@@ -1,6 +1,7 @@
 <?php
 
 namespace hiqdev\themes\dataserv;
+
 use hipanel\assets\LessSpaceAsset;
 use hiqdev\assets\icheck\iCheckAsset;
 use hiqdev\assets\pnotify\PNotifyAsset;
