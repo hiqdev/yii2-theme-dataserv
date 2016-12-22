@@ -2,8 +2,8 @@
 
 namespace hiqdev\themes\dataserv;
 
-use hipanel\assets\LessSpaceAsset;
 use hiqdev\assets\icheck\iCheckAsset;
+use hiqdev\assets\lessspace\LessSpaceAsset;
 use hiqdev\assets\pnotify\PNotifyAsset;
 use yii\bootstrap\BootstrapAsset;
 use yii\web\JqueryAsset;
