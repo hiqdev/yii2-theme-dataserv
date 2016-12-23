@@ -15,11 +15,13 @@ use yii\helpers\Html;
             </ul>
         </div>
         <div class="col-sm-9">
+            <?php /*
             <?= Yii::$app->menuManager->navbar->render([
                 'options' => [
                     'class' => 'topright'
                 ]
             ]) ?>
+            */ ?>
         </div>
     </div>
 </div>
@@ -30,16 +32,19 @@ use yii\helpers\Html;
     <div class="row">
         <div class="col-sm-3">
             <div class="logo">
-                <?= Yii::$app->themeManager->widget('LogoLink') ?>
+                <?= LogoLink::widget() ?>
             </div>
         </div>
         <div class="col-sm-9">
 
             <nav id="desktop-menu">
+                <?php /*
                 <?= Yii::$app->menuManager->main->render([
                     'options' => ['class' => 'sf-menu', 'id' => 'navigation'],
                     'activeCssClass' => 'current',
                 ]) ?>
+                */
+                ?>
             </nav>
         </div>
     </div>

@@ -3,6 +3,7 @@
 /* @var $this \yii\web\View */
 /* @var $content string */
 
+use hiqdev\thememanager\widgets\Flashes;
 use yii\helpers\Html;
 
 Yii::$app->get('themeManager')->registerAssets();
@@ -19,9 +20,8 @@ Yii::$app->get('themeManager')->registerAssets();
 </head>
 <body>
 <?php $this->beginBody() ?>
-<?php if (Yii::$app->themeManager->hasWidget('Flashes')) : ?>
-    <?= Yii::$app->themeManager->widget('Flashes') ?>
-<?php endif ?>
+
+<?= Flashes::widget() ?>
 
 <?= $this->render('//layouts/_header') ?>
 <?= $this->render('//layouts/_after_header') ?>

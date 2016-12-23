@@ -1,5 +1,9 @@
 <?php
 
+use hiqdev\thememanager\widgets\CopyrightYears;
+use hiqdev\thememanager\widgets\OrganizationLink;
+use hiqdev\thememanager\widgets\PoweredBy;
+use hiqdev\thememanager\widgets\SocialLinks;
 use yii\helpers\Url;
 
 $bigfootMenuItmes = Yii::$app->menuManager->bigfoot->getItems();
@@ -35,16 +39,19 @@ $bigfootMenuItmes = Yii::$app->menuManager->bigfoot->getItems();
     <div class="row">
         <div class="col-sm-12">
             <ul class="social-links">
-                <?= Yii::$app->themeManager->widget('SocialLinks') ?>
+                <?= SocialLinks::widget() ?>
             </ul>
             <p class="text-center">
-                © <?= Yii::$app->themeManager->widget('CopyrightYears') ?> <?= Yii::$app->themeManager->widget('OrganizationLink') ?>.
+                © <?= CopyrightYears::widget() ?> <?= OrganizationLink::widget() ?>.
                 <?= Yii::t('hiqdev:themes:dataserv', 'All rights reserved') ?>.
 
-                <?= Yii::$app->themeManager->widget('PoweredBy') ?>
+                <?= PoweredBy::widget() ?>
             </p>
             <div class="text-center">
+                <?php /*
                 <?= Yii::$app->menuManager->footer->render(['options' => ['class' => 'list-inline']]) ?>
+                */
+                ?>
             </div>
         </div>
     </div>
