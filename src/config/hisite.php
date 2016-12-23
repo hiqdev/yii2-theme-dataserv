@@ -21,11 +21,15 @@ return [
                 'hiqdev:themes:dataserv' => [
                     'class' => \yii\i18n\PhpMessageSource::class,
                     'basePath' => '@hiqdev/themes/dataserv/messages',
-//                    'fileMap' => [
-//                        'hiqdev:themes:dataserv' => 'hiqdev:themes:dataserv.php',
-//                    ],
                 ],
             ],
         ],
+    ],
+    'container' => [
+        'definitions' => [
+            \hiqdev\thememanager\widgets\Faq::class => [
+                'class' => \hiqdev\themes\dataserv\widgets\Faq::class,
+            ]
+        ]
     ],
 ];

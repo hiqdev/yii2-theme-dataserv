@@ -1,12 +1,9 @@
 <?php
 
-use hipanel\helpers\Url;
 use yii\bootstrap\BootstrapPluginAsset;
 use yii\helpers\Html;
 
-/** @var string $language */
-/** @var string $selectUrl */
-/** @var array $languages */
+/** @var array $items */
 
 BootstrapPluginAsset::register($this);
 
@@ -57,9 +54,9 @@ $this->registerCss("
     </a>
     <div id="languageChooserContent" class="hidden">
         <ul class="unstyled">
-            <?php foreach ($languages as $code => $language) : ?>
+            <?php foreach ($items as $code => $data) : ?>
                 <li>
-                    <?= Html::a($language, Url::to(array_merge($selectUrl, ['language' => $code]))) ?>
+                    <?= Html::a($data['label'], $data['url']) ?>
                 </li>
             <?php endforeach ?>
         </ul>
