@@ -1,5 +1,7 @@
 <?php
 
+use hiqdev\thememanager\menus\AbstractMainMenu;
+use hiqdev\thememanager\menus\AbstractNavbarMenu;
 use hiqdev\thememanager\widgets\LogoLink;
 use yii\helpers\Html;
 
@@ -15,13 +17,11 @@ use yii\helpers\Html;
             </ul>
         </div>
         <div class="col-sm-9">
-            <?php /*
-            <?= Yii::$app->menuManager->navbar->render([
+            <?= AbstractNavbarMenu::widget([], [
                 'options' => [
                     'class' => 'topright'
                 ]
             ]) ?>
-            */ ?>
         </div>
     </div>
 </div>
@@ -38,18 +38,15 @@ use yii\helpers\Html;
         <div class="col-sm-9">
 
             <nav id="desktop-menu">
-                <?php /*
-                <?= Yii::$app->menuManager->main->render([
+                <?= AbstractMainMenu::widget([], [
                     'options' => ['class' => 'sf-menu', 'id' => 'navigation'],
                     'activeCssClass' => 'current',
                 ]) ?>
-                */
-                ?>
             </nav>
         </div>
     </div>
 </div>
-<!-- END OF HEADER -->
+<!--END OF HEADER-->
 
 <?php if (empty($this->blocks['subHeader'])) : ?>
     <div id="subheader" class="<?= $this->blocks['subHeaderClass'] ?: 'blog' ?>">
