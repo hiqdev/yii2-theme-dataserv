@@ -1,12 +1,13 @@
 <?php
 
+use hiqdev\thememanager\menus\AbstractFooterMenu;
 use hiqdev\thememanager\widgets\CopyrightYears;
 use hiqdev\thememanager\widgets\OrganizationLink;
 use hiqdev\thememanager\widgets\PoweredBy;
 use hiqdev\thememanager\widgets\SocialLinks;
 use yii\helpers\Url;
 
-$bigfootMenuItmes = Yii::$app->menuManager->bigfoot->getItems();
+$bigfootMenuItmes = []; // todo: where is the BigFoot menu??
 ?>
 
 <?php if (!empty($bigfootMenuItmes)) : ?>
@@ -48,10 +49,7 @@ $bigfootMenuItmes = Yii::$app->menuManager->bigfoot->getItems();
                 <?= PoweredBy::widget() ?>
             </p>
             <div class="text-center">
-                <?php /*
-                <?= Yii::$app->menuManager->footer->render(['options' => ['class' => 'list-inline']]) ?>
-                */
-                ?>
+                <?= AbstractFooterMenu::widget([], ['options' => ['class' => 'list-inline']]) ?>
             </div>
         </div>
     </div>
