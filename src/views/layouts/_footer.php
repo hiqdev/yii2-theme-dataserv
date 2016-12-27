@@ -6,6 +6,7 @@ use hiqdev\thememanager\widgets\OrganizationLink;
 use hiqdev\thememanager\widgets\PoweredBy;
 use hiqdev\thememanager\widgets\SocialLinks;
 use yii\helpers\Url;
+use yii\widgets\Menu;
 
 $bigfootMenuItmes = []; // todo: where is the BigFoot menu??
 ?>
@@ -23,8 +24,7 @@ $bigfootMenuItmes = []; // todo: where is the BigFoot menu??
                         <h4><a href="<?= Url::to($item['url']) ?>"><?= $item['label'] ?></a></h4>
                     <?php endif ?>
                     <?php if (isset($item['items'])) : ?>
-                        <?= Yii::$app->themeManager->widget([
-                            'class' => 'Menu',
+                        <?= Menu::widget([
                             'items' => $item['items'],
                         ]) ?>
                     <?php endif ?>
