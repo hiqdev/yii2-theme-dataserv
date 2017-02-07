@@ -25,11 +25,4 @@ return [
             ],
         ],
     ],
-    'container' => [
-        'definitions' => [
-            \hiqdev\thememanager\widgets\Faq::class => [
-                'class' => \hiqdev\themes\dataserv\widgets\Faq::class,
-            ]
-        ]
-    ],
 ];
