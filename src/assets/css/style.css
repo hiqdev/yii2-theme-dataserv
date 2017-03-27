@@ -6889,10 +6889,6 @@ ul.topright li.activeLanguage a {
     display: block;
 }
 
-.filter-nav li:hover {
-    background-color: #EEEEEE;
-}
-
 /**
  * -------------------------
  * @section Navigational Bar
