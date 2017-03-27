@@ -33,3 +33,9 @@ div.header-lined small {
 .form-control {
     box-shadow: none!important;
 }
+
+.social .text-center a:hover,
+.social .text-center a:active,
+.social .text-center a:focus {
+    color: #cccccc;
+}
