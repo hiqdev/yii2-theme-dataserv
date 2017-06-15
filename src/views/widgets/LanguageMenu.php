@@ -48,17 +48,20 @@ $this->registerCss("
 }
 ");
 ?>
-<div class="pull-right nav">
-    <a href="#" data-toggle="popover" id="languageChooser" data-original-title="" title="">
-        <i class="fa fa-language"></i> <?= strtoupper(substr($language, 0, 2)) ?> <span class="caret"></span>
-    </a>
-    <div id="languageChooserContent" class="hidden">
-        <ul class="unstyled">
-            <?php foreach ($items as $code => $data) : ?>
-                <li>
-                    <?= Html::a($data['label'], $data['url']) ?>
-                </li>
-            <?php endforeach ?>
-        </ul>
+
+<?php if (count($items) > 1) : ?>
+    <div class="pull-right nav">
+        <a href="#" data-toggle="popover" id="languageChooser" data-original-title="" title="">
+            <i class="fa fa-language"></i> <?= strtoupper(substr($language, 0, 2)) ?> <span class="caret"></span>
+        </a>
+        <div id="languageChooserContent" class="hidden">
+            <ul class="unstyled">
+                <?php foreach ($items as $code => $data) : ?>
+                    <li>
+                        <?= Html::a($data['label'], $data['url']) ?>
+                    </li>
+                <?php endforeach ?>
+            </ul>
+        </div>
     </div>
-</div>
+<?php endif ?>
