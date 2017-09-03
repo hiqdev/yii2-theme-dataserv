@@ -1,5 +1,4 @@
-Yii2 DataServ Theme
-===================
+# Yii2 DataServ Theme
 
 **DataServ Theme for hiqdev/yii2-thememanager**
 
@@ -10,7 +9,12 @@ Yii2 DataServ Theme
 [![Scrutinizer Code Quality](https://img.shields.io/scrutinizer/g/hiqdev/yii2-theme-dataserv.svg)](https://scrutinizer-ci.com/g/hiqdev/yii2-theme-dataserv/)
 [![Dependency Status](https://www.versioneye.com/php/hiqdev:yii2-theme-dataserv/dev-master/badge.svg)](https://www.versioneye.com/php/hiqdev:yii2-theme-dataserv/dev-master)
 
-This package provides DataServ theme for [Yii2 framework](http://yiiframework.com).
+This package provides pluggable DataServ theme for [Yii2] projects.
+
+This package uses [hiqdev/yii2-thememanager] theming library.
+
+[yii2]:                     http://www.yiiframework.com/
+[hiqdev/yii2-thememanager]: https://github.com/hiqdev/yii2-thememanager
 
 ## Installation
 
@@ -35,4 +39,4 @@ to the require section of your composer.json.
 This project is released under the terms of the proprietary [license](LICENSE).
 Read more [here](https://en.wikipedia.org/wiki/Proprietary_software).
 
-Copyright © 2014-2016, HiQDev (http://hiqdev.com/)
+Copyright © 2016-2017, HiQDev (http://hiqdev.com/)
