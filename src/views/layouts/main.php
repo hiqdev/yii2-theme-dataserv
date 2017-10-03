@@ -26,7 +26,17 @@ Yii::$app->get('themeManager')->registerAssets();
 <?= $this->render('//layouts/_header') ?>
 <?= $this->render('//layouts/_after_header') ?>
 
-<?= $content ?>
+    <?php if (Yii::$app->errorHandler->exception) : ?>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12" style="margin: 5em auto;">
+                    <?= $content ?>
+                </div>
+            </div>
+        </div>
+    <?php else : ?>
+        <?= $content ?>
+    <?php endif; ?>
 
 <?= $this->render('//layouts/_footer') ?>
 <?= $this->render('//layouts/_after_footer') ?>
