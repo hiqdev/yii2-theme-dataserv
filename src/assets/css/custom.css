@@ -39,3 +39,7 @@ div.header-lined small {
 .social .text-center a:focus {
     color: #cccccc;
 }
+
+.domainavailability button {
+    margin-top: 0px;
+}
