@@ -40,6 +40,10 @@ div.header-lined small {
     color: #cccccc;
 }
 
-.domainavailability button {
-    margin-top: 0px;
+#check-domain .form-group {
+    margin-bottom: 0;
+}
+
+#check-domain .col-sm-11 {
+    margin-top: 22px;
 }
