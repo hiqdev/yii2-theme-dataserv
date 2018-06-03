@@ -19,8 +19,8 @@ use yii\helpers\Html;
         <div class="col-sm-8">
             <?= AbstractNavbarMenu::widget([], [
                 'options' => [
-                    'class' => 'topright'
-                ]
+                    'class' => 'topright',
+                ],
             ]) ?>
         </div>
     </div>
@@ -55,7 +55,7 @@ use yii\helpers\Html;
             <?= Html::tag('h2', $this->blocks['subTitle']) ?>
         </div>
 
-        <?php if ($this->context->id == 'news' && $this->context->action->id == 'view') : ?>
+        <?php if ($this->context->id === 'news' && $this->context->action->id === 'view') : ?>
             <a href="#" rel="shared-popover" data-popover-content="#shared-btn-Popover" title="Share"
                data-placement="bottom" class="mtr-btn button-circle button-fab ripple"><i
                     class="fa fa-share-alt"></i></a>

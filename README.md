@@ -39,4 +39,4 @@ to the require section of your composer.json.
 This project is released under the terms of the proprietary [license](LICENSE).
 Read more [here](https://en.wikipedia.org/wiki/Proprietary_software).
 
-Copyright © 2016-2017, HiQDev (http://hiqdev.com/)
+Copyright © 2016-2018, HiQDev (http://hiqdev.com/)

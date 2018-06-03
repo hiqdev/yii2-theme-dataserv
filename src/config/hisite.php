@@ -1,12 +1,11 @@
 <?php
-
-/*
+/**
  * DataServ Theme for hiqdev/yii2-thememanager
  *
  * @link      https://github.com/hiqdev/yii2-theme-dataserv
  * @package   yii2-theme-dataserv
- * @license   BSD-3-Clause
- * @copyright Copyright (c) 2015-2016, HiQDev (http://hiqdev.com/)
+ * @license   proprietary
+ * @copyright Copyright (c) 2016-2018, HiQDev (http://hiqdev.com/)
  */
 
 return [

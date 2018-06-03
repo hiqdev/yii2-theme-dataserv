@@ -4,7 +4,6 @@ use yii\bootstrap\BootstrapPluginAsset;
 use yii\helpers\Html;
 
 /** @var array $items */
-
 BootstrapPluginAsset::register($this);
 
 $this->registerJs(<<<'JS'
@@ -21,7 +20,7 @@ $('#languageChooser').popover({
 });
 JS
 );
-$this->registerCss("
+$this->registerCss('
 .language-popover {
     width: 100%;
     background-color: rgba(20, 20, 20, 0.98);
@@ -46,7 +45,7 @@ $this->registerCss("
     color: #f2f2f2;
     font-size: 0.8em;
 }
-");
+');
 ?>
 
 <?php if (count($items) > 1) : ?>

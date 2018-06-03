@@ -1,4 +1,12 @@
 <?php
+/**
+ * DataServ Theme for hiqdev/yii2-thememanager
+ *
+ * @link      https://github.com/hiqdev/yii2-theme-dataserv
+ * @package   yii2-theme-dataserv
+ * @license   proprietary
+ * @copyright Copyright (c) 2016-2018, HiQDev (http://hiqdev.com/)
+ */
 
 namespace hiqdev\themes\dataserv;
 
@@ -15,12 +23,12 @@ use yii\web\YiiAsset;
 class Asset extends \yii\web\AssetBundle
 {
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public $sourcePath = '@hiqdev/themes/dataserv/assets';
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public $css = [
         '//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css',
@@ -58,7 +66,7 @@ class Asset extends \yii\web\AssetBundle
     ];
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public $depends = [
         YiiAsset::class,

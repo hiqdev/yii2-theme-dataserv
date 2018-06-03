@@ -4,14 +4,14 @@
 /* @var $form yii\bootstrap\ActiveForm */
 /* @var $model app\models\ContactForm */
 
-use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 use yii\captcha\Captcha;
+use yii\helpers\Html;
 
 $this->title = Yii::t('app', 'Contact');
 $this->blocks['subHeaderClass'] = 'contact';
 $this->blocks['subTitle'] = Yii::t('app', 'Our friendly Support Team is available to help you 24 hours a day');
-$this->registerCss(".help-block { font-size: 12px; }");
+$this->registerCss('.help-block { font-size: 12px; }');
 ?>
 <!-- CONTACT FORM -->
 <div class="contact-elements">
@@ -68,7 +68,7 @@ $this->registerCss(".help-block { font-size: 12px; }");
             <h4><?= Yii::t('app', 'Have questions?') ?></h4>
             <p>
                 <?= Yii::t('app', 'Please note If you are already our customer and you require technical support, please open a support ticket in your {0}.', [
-                    Html::a(Yii::t('app', 'control panel'), '#', ['target' => '_blank'])
+                    Html::a(Yii::t('app', 'control panel'), '#', ['target' => '_blank']),
                 ])?>
             </p>
         </div>
@@ -97,7 +97,7 @@ $this->registerCss(".help-block { font-size: 12px; }");
                     <?= $form->field($model, 'body')->textArea(['rows' => 12, 'placeholder' => $model->getAttributeLabel('body')])->label(false) ?>
                     <?= $form->field($model, 'verifyCode')->widget(Captcha::className(), [
                         'template' => '<div class="row"><div class="col-lg-3">{image}</div><div class="col-lg-6">{input}</div></div>',
-                        'options' => ['placeholder' => $model->getAttributeLabel('verifyCode')]
+                        'options' => ['placeholder' => $model->getAttributeLabel('verifyCode')],
                     ])->label(false) ?>
                     <?= Html::submitButton('Submit', ['class' => 'mtr-btn button-fab ripple', 'name' => 'contact-button', 'id' => 'submit']) ?>
                 <?php ActiveForm::end(); ?>
