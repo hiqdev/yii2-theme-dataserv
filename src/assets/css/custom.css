@@ -44,6 +44,11 @@ div.header-lined small {
     margin-bottom: 0;
 }
 
-#check-domain .col-sm-11 {
-    margin-top: 22px;
+#bulkcheckform-zones label, .domain-form-container ul[role="tablist"] a {
+    color: #FFFFFF;
 }
+
+/*#check-domain .col-sm-11 {*/
+    /*margin-top: 22px;*/
+/*}*/
+
