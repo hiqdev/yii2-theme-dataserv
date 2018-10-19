@@ -4916,7 +4916,15 @@ form#commentform input#submit {
 }
 
 /* ==============================
-   14 = Elements
+   14 = Telegram Bot
+   ============================== */
+#subheader.telegrambot {
+    background: url(../images/telegram.png) center bottom no-repeat;
+    padding: 192px 25px;
+}
+
+/* ==============================
+   15 = Elements
    ============================== */
 .elements {
     background: #e0e1e7;
