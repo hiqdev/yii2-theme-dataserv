@@ -6895,18 +6895,18 @@ ul.topright li.activeLanguage a {
  * -------------------------
  */
 
-#top-cart {
+.top-cart {
     float: right;
     margin: 0;
     padding: 0;
 }
 
-#top-cart .nav, #top-cart > a > span {
+.top-cart .nav, #top-cart > a > span {
     margin: 0;
     padding: 0;
 }
 
-#top-cart a.quick-nav {
+.top-cart a.quick-nav {
     margin: 0;
     padding: 0;
     color: #fff !important;
