@@ -378,6 +378,9 @@ ul.topright li a:hover, ul.topright li a:focus {
 .logo {
     padding-top: 14px;
 }
+.logo IMG {
+    max-height: 50px;
+}
 
 /* Navigation  ---------------------- */
 nav#desktop-menu {
