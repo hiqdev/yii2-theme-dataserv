@@ -27,6 +27,12 @@ div.header-lined small {
     white-space: nowrap;
 }
 
+div.header .logo a {
+    font-size: 28px;
+    font-weight: 900;
+    color: white;
+}
+
 .has-success .form-control,
 .has-error .form-control,
 .has-feedback .form-control,
