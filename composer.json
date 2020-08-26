@@ -45,7 +45,6 @@
     ],
     "require": {
         "hiqdev/yii2-thememanager": "<2.0 || dev-master",
-        "hiqdev/yii2-asset-icheck": "~1.0.2.5",
         "hiqdev/yii2-pnotify": "<2.0 || dev-master",
         "hiqdev/yii2-asset-less-space": "<2.0 || dev-master"
     },

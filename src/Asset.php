@@ -10,7 +10,6 @@
 
 namespace hiqdev\themes\dataserv;
 
-use hiqdev\assets\icheck\iCheckAsset;
 use hiqdev\assets\lessspace\LessSpaceAsset;
 use hiqdev\assets\pnotify\PNotifyAsset;
 use yii\bootstrap\BootstrapAsset;
@@ -74,6 +73,5 @@ class Asset extends \yii\web\AssetBundle
         BootstrapAsset::class,
         LessSpaceAsset::class,
         PNotifyAsset::class,
-        iCheckAsset::class,
     ];
 }
