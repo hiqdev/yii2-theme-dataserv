@@ -49,10 +49,10 @@ use yii\helpers\Html;
 <!--END OF HEADER-->
 
 <?php if (empty($this->blocks['subHeader'])) : ?>
-    <div id="subheader" class="<?= $this->blocks['subHeaderClass'] ?: 'blog' ?>">
+    <div id="subheader" class="<?= $this->blocks['subHeaderClass'] ?? 'blog' ?>">
         <div class="subheader-text">
             <?= Html::tag('h1', $this->title) ?>
-            <?= Html::tag('h2', $this->blocks['subTitle']) ?>
+            <?= Html::tag('h2', $this->blocks['subTitle'] ?? '') ?>
         </div>
 
         <?php if ($this->context->id === 'news' && $this->context->action->id === 'view') : ?>
