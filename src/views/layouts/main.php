@@ -16,6 +16,12 @@ Yii::$app->get('themeManager')->registerAssets();
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
+    <?php // Was missing entirely - the browser fell back to fetching /favicon.ico as a
+    // static file (public/favicon.ico), which is the same physical file for every
+    // brand sharing this codebase regardless of the per-brand 'favicon.ico' param. ?>
+    <?php if (!empty(Yii::$app->params['favicon.ico'])) : ?>
+        <link rel="shortcut icon" href="<?= Yii::$app->assetManager->publish(Yii::$app->params['favicon.ico'])[1] ?>">
+    <?php endif ?>
     <?php $this->head() ?>
 </head>
 <body>
